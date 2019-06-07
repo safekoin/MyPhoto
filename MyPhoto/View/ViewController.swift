@@ -12,8 +12,8 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var photoTableView: UITableView!
+    
     var myPhotos = [Photo]() {
-        
         didSet {
             DispatchQueue.main.async {
                 self.photoTableView.reloadData()
@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         getPhotos()
+        
     }
     
     func getPhotos() {
@@ -52,6 +53,10 @@ class ViewController: UIViewController {
                     print("Something For The Developer: \(error.localizedDescription)")
                 }
                 
+                DispatchQueue.main.async {
+                    
+                    self.photoTableView.reloadData()
+                }
             }
         }.resume()
     }
@@ -77,8 +82,28 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        let photo = myPhotos[indexPath.row]
+        
+        let imageVC = storyboard.instantiateViewController(withIdentifier: "ImageViewController") as! ImageViewController
+        
+        imageVC.thumbnailUrl = photo.thumbnailUrl
+        self.navigationController?.pushViewController(imageVC, animated: true)
+        
+        
+    }
     
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }
+
+
+// Download Image from URL
 extension UIImageView {
     func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {  // for swift 4.2 syntax just use ===> mode: UIView.ContentMode
         contentMode = mode
@@ -94,8 +119,11 @@ extension UIImageView {
             }
             }.resume()
     }
+    
     func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {  // for swift 4.2 syntax just use ===> mode: UIView.ContentMode
         guard let url = URL(string: link) else { return }
         downloaded(from: url, contentMode: mode)
-    }
+        
+       
+}
 }

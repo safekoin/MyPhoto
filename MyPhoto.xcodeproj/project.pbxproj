@@ -62,11 +62,11 @@
 			children = (
 				D2290AC422A57D9000270274 /* Model */,
 				D2290AC522A57DA200270274 /* View */,
-				D2290AB222A57B2C00270274 /* AppDelegate.swift */,
 				D2290AB622A57B2C00270274 /* Main.storyboard */,
 				D2290AB922A57B2C00270274 /* Assets.xcassets */,
 				D2290ABB22A57B2C00270274 /* LaunchScreen.storyboard */,
 				D2290ABE22A57B2C00270274 /* Info.plist */,
+				D2290AB222A57B2C00270274 /* AppDelegate.swift */,
 			);
 			path = MyPhoto;
 			sourceTree = "<group>";

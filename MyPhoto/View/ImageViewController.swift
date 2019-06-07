@@ -10,21 +10,51 @@ import UIKit
 
 class ImageViewController: UIViewController {
 
+    var thumbnailUrl : String!
+    
+    
+    @IBOutlet weak var secondImageView: UIImageView!
+    
+//    lazy var session: URLSession = {
+//        
+//        let config = URLSessionConfiguration.default
+//        config.timeoutIntervalForRequest = 20
+//        return URLSession(configuration: config)
+//    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+       //setup()
+        secondImageView.downloaded(from: thumbnailUrl)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//
+//    func setup() {
+//
+//        guard let urlString = thumbnailUrl, let url = URL(string: urlString) else {
+//            return
+//        }
+//
+//        session.dataTask(with: url) { [unowned self] (dat, _, err) in
+//            if let error = err {
+//                print("download error: \(error.localizedDescription)")
+//                return
+//            }
+//
+//            if let data = dat {
+//
+//                guard let image = UIImage(data: data) else {
+//                    return
+//                }
+//
+//                DispatchQueue.main.async {
+//                    self.secondImageView.image = image
+//                }
+//
+//            }
+//        }
+//
+    //}
 
 }
