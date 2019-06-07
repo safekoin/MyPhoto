@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var photoTableView: UITableView!
     var myPhotos = [Photo]() {
+        
         didSet {
             DispatchQueue.main.async {
                 self.photoTableView.reloadData()
