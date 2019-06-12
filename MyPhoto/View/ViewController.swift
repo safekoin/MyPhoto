@@ -31,7 +31,9 @@ class ViewController: UIViewController {
         
         let endpoint = "http://jsonplaceholder.typicode.com/photos"
         
-        let url = URL(string: endpoint)!
+        guard let url = URL(string: endpoint) else {
+            return
+        }
         
         URLSession.shared.dataTask(with: url) { (dat, _, err) in
             
@@ -45,18 +47,17 @@ class ViewController: UIViewController {
                 do {
                     self.myPhotos = try JSONDecoder().decode([Photo].self, from: data)
                     
-                  
                 }
                     
                 catch {
                     
                     print("Something For The Developer: \(error.localizedDescription)")
                 }
-                
-                DispatchQueue.main.async {
-                    
-                    self.photoTableView.reloadData()
-                }
+
+//                DispatchQueue.main.async {
+//
+//                    self.photoTableView.reloadData()
+//                }
             }
         }.resume()
     }
@@ -93,15 +94,14 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         imageVC.thumbnailUrl = photo.thumbnailUrl
         self.navigationController?.pushViewController(imageVC, animated: true)
         
-        
     }
-    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    
 }
-
 
 // Download Image from URL
 extension UIImageView {
@@ -124,6 +124,8 @@ extension UIImageView {
         guard let url = URL(string: link) else { return }
         downloaded(from: url, contentMode: mode)
         
-       
+        
+        
 }
+    
 }

@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyPhoto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="MyPhoto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,22 +30,22 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WDe-ik-7Lk">
-                                                    <rect key="frame" x="240" y="11" width="100" height="100"/>
+                                                    <rect key="frame" x="201" y="11" width="100" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="zfk-1C-SCD"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hNR-9f-PUK">
-                                                    <rect key="frame" x="15" y="40" width="215" height="42.5"/>
+                                                    <rect key="frame" x="15" y="40" width="176" height="45"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Photo Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="VwF-1p-8Jm">
-                                                            <rect key="frame" x="0.0" y="0.0" width="86.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="86.5" height="23"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zou-I2-huo">
-                                                            <rect key="frame" x="0.0" y="24.5" width="57.5" height="18"/>
+                                                            <rect key="frame" x="0.0" y="27" width="57.5" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -58,6 +58,7 @@
                                                 <constraint firstItem="WDe-ik-7Lk" firstAttribute="leading" secondItem="hNR-9f-PUK" secondAttribute="trailing" constant="10" id="R1A-FL-FsQ"/>
                                                 <constraint firstItem="hNR-9f-PUK" firstAttribute="top" secondItem="0ZJ-um-9Dr" secondAttribute="top" constant="40" id="Wxc-U9-Eat"/>
                                                 <constraint firstAttribute="trailing" secondItem="WDe-ik-7Lk" secondAttribute="trailing" constant="74" id="aTj-kA-k5R"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hNR-9f-PUK" secondAttribute="bottom" constant="29" id="gM0-i1-UOQ"/>
                                                 <constraint firstItem="WDe-ik-7Lk" firstAttribute="top" secondItem="0ZJ-um-9Dr" secondAttribute="top" constant="11" id="hpS-bw-e6T"/>
                                                 <constraint firstAttribute="bottom" secondItem="WDe-ik-7Lk" secondAttribute="bottom" constant="13.5" id="pOA-Gd-TSX"/>
                                             </constraints>

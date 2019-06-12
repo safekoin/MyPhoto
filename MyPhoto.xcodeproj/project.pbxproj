@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		048D736222A5F6FE00655914 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D736122A5F6FE00655914 /* ImageViewController.swift */; };
+		D223A98922AEE52900C2FED4 /* MyPhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D223A98822AEE52900C2FED4 /* MyPhotoTests.swift */; };
 		D2290AB322A57B2C00270274 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2290AB222A57B2C00270274 /* AppDelegate.swift */; };
 		D2290AB522A57B2C00270274 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2290AB422A57B2C00270274 /* ViewController.swift */; };
 		D2290AB822A57B2C00270274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2290AB622A57B2C00270274 /* Main.storyboard */; };
@@ -17,8 +18,21 @@
 		D2290ACF22A5AA1800270274 /* PhotoDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2290ACE22A5AA1800270274 /* PhotoDecodable.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D223A98B22AEE52900C2FED4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2290AA722A57B2C00270274 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2290AAE22A57B2C00270274;
+			remoteInfo = MyPhoto;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		048D736122A5F6FE00655914 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		D223A98622AEE52900C2FED4 /* MyPhotoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPhotoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D223A98822AEE52900C2FED4 /* MyPhotoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhotoTests.swift; sourceTree = "<group>"; };
+		D223A98A22AEE52900C2FED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2290AAF22A57B2C00270274 /* MyPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2290AB222A57B2C00270274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2290AB422A57B2C00270274 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +45,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D223A98322AEE52900C2FED4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2290AAC22A57B2C00270274 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,10 +62,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D223A98722AEE52900C2FED4 /* MyPhotoTests */ = {
+			isa = PBXGroup;
+			children = (
+				D223A98822AEE52900C2FED4 /* MyPhotoTests.swift */,
+				D223A98A22AEE52900C2FED4 /* Info.plist */,
+			);
+			path = MyPhotoTests;
+			sourceTree = "<group>";
+		};
 		D2290AA622A57B2C00270274 = {
 			isa = PBXGroup;
 			children = (
 				D2290AB122A57B2C00270274 /* MyPhoto */,
+				D223A98722AEE52900C2FED4 /* MyPhotoTests */,
 				D2290AB022A57B2C00270274 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				D2290AAF22A57B2C00270274 /* MyPhoto.app */,
+				D223A98622AEE52900C2FED4 /* MyPhotoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,6 +124,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D223A98522AEE52900C2FED4 /* MyPhotoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D223A98F22AEE52900C2FED4 /* Build configuration list for PBXNativeTarget "MyPhotoTests" */;
+			buildPhases = (
+				D223A98222AEE52900C2FED4 /* Sources */,
+				D223A98322AEE52900C2FED4 /* Frameworks */,
+				D223A98422AEE52900C2FED4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D223A98C22AEE52900C2FED4 /* PBXTargetDependency */,
+			);
+			name = MyPhotoTests;
+			productName = MyPhotoTests;
+			productReference = D223A98622AEE52900C2FED4 /* MyPhotoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D2290AAE22A57B2C00270274 /* MyPhoto */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2290AC122A57B2C00270274 /* Build configuration list for PBXNativeTarget "MyPhoto" */;
@@ -119,6 +169,10 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Nwabueze Chukwunyere";
 				TargetAttributes = {
+					D223A98522AEE52900C2FED4 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = D2290AAE22A57B2C00270274;
+					};
 					D2290AAE22A57B2C00270274 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -138,11 +192,19 @@
 			projectRoot = "";
 			targets = (
 				D2290AAE22A57B2C00270274 /* MyPhoto */,
+				D223A98522AEE52900C2FED4 /* MyPhotoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D223A98422AEE52900C2FED4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2290AAD22A57B2C00270274 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -156,6 +218,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D223A98222AEE52900C2FED4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D223A98922AEE52900C2FED4 /* MyPhotoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2290AAB22A57B2C00270274 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -169,6 +239,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D223A98C22AEE52900C2FED4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2290AAE22A57B2C00270274 /* MyPhoto */;
+			targetProxy = D223A98B22AEE52900C2FED4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D2290AB622A57B2C00270274 /* Main.storyboard */ = {
@@ -190,6 +268,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D223A98D22AEE52900C2FED4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N464JNLPP4;
+				INFOPLIST_FILE = MyPhotoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mac.MyPhotoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPhoto.app/MyPhoto";
+			};
+			name = Debug;
+		};
+		D223A98E22AEE52900C2FED4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N464JNLPP4;
+				INFOPLIST_FILE = MyPhotoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mac.MyPhotoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPhoto.app/MyPhoto";
+			};
+			name = Release;
+		};
 		D2290ABF22A57B2C00270274 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -345,6 +463,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D223A98F22AEE52900C2FED4 /* Build configuration list for PBXNativeTarget "MyPhotoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D223A98D22AEE52900C2FED4 /* Debug */,
+				D223A98E22AEE52900C2FED4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D2290AAA22A57B2C00270274 /* Build configuration list for PBXProject "MyPhoto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

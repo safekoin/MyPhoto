@@ -18,15 +18,6 @@ class PhotoTableViewCell: UITableViewCell {
     @IBOutlet weak var photoImageView: UIImageView!
    
     
-    func configure(with: Photo) {
-        
-        let identifier = "photoCell"
-        
-        
-        
-        
-        
-        
-    }
+   
 
 }
